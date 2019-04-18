@@ -1,0 +1,25 @@
+<div id="customFieldsManager" class="modal">
+  <div class="modal-content">
+    <form #form="ngForm">
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="first_name">Label</label><br>
+          <input required [(ngModel)]="field.headerName" name="headerName" id="headerName" type="text" class="validate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label>Type</label><br>
+          <select required [(ngModel)]="field.type" name="selectedOption" materialize="material_select" >
+                <option value="" disabled selected>Choose your option</option>
+                <option *ngFor="let option of columnTypes" [value]="option.value">{{option.name}}</option>
+              </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</button>
+    <button class="waves-effect waves-green btn-flat" (click)="save()" [disabled]="!form.valid">Save</button>
+  </div>
+</div>

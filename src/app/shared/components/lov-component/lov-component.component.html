@@ -1,0 +1,16 @@
+<div [class]="'input-field col s'+size">
+    <label class="control-label" (click)="inputSearch.focus();" [class.active]="term.value">{{label}}</label>
+    <input class="form-control"
+           [formControl]="term"
+           [(ngModel)]="value"
+           name="term"
+           #inputSearch
+    >
+    <div class="resultsContainer" [hidden]="results?.length==0">
+        <ul class="dropdown-content active">
+            <li *ngFor="let item of results">
+                <a (click)="selectItem(item[returnValue],item)">{{display(item)}}</a>
+            </li>
+        </ul>
+    </div>
+</div>

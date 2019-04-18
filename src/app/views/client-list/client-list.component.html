@@ -1,0 +1,94 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10 col-sm-6 col-xs-6">
+    <h2>Lista Clienti</h2>
+    <ol class="breadcrumb">
+      <li class="active">
+        Administreaza clientii aplicatiei.
+      </li>
+    </ol>
+  </div>
+
+  <div class="col-lg-2 col-sm-6 col-xs-6">
+    <div class="title-action">
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddClient"
+        aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus "></i> Adauga Client</button>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="row wrapper wrapper-content animated fadeInRight">
+
+  <client-detail></client-detail>
+
+  <div class="col-md-12">
+    <div class="dataTableSorter">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 pull-right listSearch">
+          <form method="get" action="" class="form-horizontal">
+            <div class="input-group">
+              <input type="text" class="form-control" name="search" placeholder="cauta in lista">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-sm btn-primary">Cauta</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" col-sm-12">
+    <ngx-datatable class="material" [rows]="rows" [messages]="messages" [columnMode]="'force'"
+      [loadingIndicator]="loadingIndicator" [selectionType]="'single'" (select)='onSelect($event)'>
+
+      <ngx-datatable-column name="Client ID" sortable="false" prop="id">
+        <ng-template let-column="column" let-sort="sortFn" ngx-datatable-header-template>
+          {{column.name}}
+        </ng-template>
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <!--<button md-icon-button (click)="blockAgents(value)" [disabled]="row['status']==='BLOCKED'">
+            <i class="fa fa-ban"></i>
+        </button>-->
+          {{row.ClientID}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Nume Client" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.FirstName}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Email" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.Email}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Telefon" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.Phone}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Gen" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.Gender}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Actiuni" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <a (click)="viewtClient(row.ClientID)">
+            <i class="fa fa-eye" title="Vizualizare"></i>
+          </a>
+          <a (click)="editClient(row.ClientID)">
+            <i class="fa fa-pencil" title="Editeaza"></i>
+          </a>
+          <a (click)="deleteClient(row.ClientID)">
+            <i class="fa fa-trash" title="Sterge"></i>
+          </a>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>
+
+<client-detail (afterSave)="loadClients()" [ClientID]="selectedClientID" #clientDetails></client-detail>

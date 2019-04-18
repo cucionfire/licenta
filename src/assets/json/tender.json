@@ -1,0 +1,29 @@
+{  
+   "tender_id":57,
+   "tender_code":"T201505-01",
+   "tender_name":"TEST-LP2",
+   "responsible_buyer":"FISMGR",
+   "area_location":"AAC",
+   "tender_stat_ind":1,
+   "tender_stat_ind_s":"PRP",
+   "tender_stat_ind_l":"In preparation",
+   "tender_issue_dt":"2016-05-13",
+   "tender_end_dt":"2016-05-20",
+   "contr_vld_fr_dt":"2015-05-13",
+   "contr_vld_to_dt":"2017-05-13",
+   "location_code":"AAC",
+   "tenderLocations":[  
+            {  
+               "tender_loc_id":44,
+               "tender_id":44,
+               "location_code":"MUC",
+               "tender_loc_stat_ind_s":"RND",
+               "percent":66.67,
+               "volume":1500000,
+               "unit_code":"LT",
+               "contract_valid_from":"2016-01-01",
+               "bidding_counterp":"BPC",
+               "dom_int_ind_s":"U"
+            }
+         ]
+}

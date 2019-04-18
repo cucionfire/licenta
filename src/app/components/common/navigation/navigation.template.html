@@ -1,0 +1,43 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav metismenu" id="side-menu">
+
+            <!--<li class=" dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"</a>
+                <ul class="dropdown-menu">
+                    
+                </ul>
+            </li>-->
+
+            <li class="sideNavLinks"> <a [routerLink]="['/agenda']">
+                    Agenda
+                </a>
+            </li>
+            <li class="sideNavLinks"> <a [routerLink]="['/appointments']">
+                    Programari
+                </a>
+            </li>
+            <li class="sideNavLinks"><a [routerLink]="['/clients']">
+                    Clienti
+                </a>
+            </li>
+            <li class="sideNavLinks"><a [routerLink]="['/services']">
+                    Servicii
+                </a></li>
+
+            <li class="sideNavLinks">
+                <a href="#"> <span class="nav-label">Utilizatori si Roluri</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" style="height: 0px;">
+                    <li class="second-level-collapse"><a [routerLink]="['/users']">Utilizatori</a></li>
+                    <li class="second-level-collapse"><a [routerLink]="['/roles']">Roluri</a></li>
+                </ul>
+            </li>
+
+            <li class="sideNavLinks"><a [routerLink]="['/reports']">
+                    Rapoarte
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

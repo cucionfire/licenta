@@ -1,0 +1,38 @@
+<div *ngIf="formChanges.length>0" class="left">
+    {{'Last modified at'| i18n:lang}} <em>{{formChanges[0]['date'] | date}}</em> at <em>{{formChanges[0]['date'] |
+    date:'shortTime'}}</em> by <strong>Florin</strong>.
+    (<a materialize="dropdown" class='dropdown-button' href='#' data-activates='dropdown-changes'>
+    {{'see all' | i18n:lang}}
+</a>
+    <ul id='dropdown-changes' class='dropdown-content'>
+        <li>
+            <table class="bordered highlight">
+                <tbody>
+                <ng-template let-group ngFor [ngForOf]="formChanges">
+                    <tr>
+                        <td colspan="3" class="changeDate">
+                            <strong>{{group['date'] | date}}</strong> at
+                            <strong>
+                                {{group['date'] | date:'shortTime'}}
+                            </strong>
+                        </td>
+                    </tr>
+                    <tr *ngFor="let item of group.changes">
+                        <td>{{getLabel(item.field)}}</td>
+                        <td>
+                            <s>
+                                {{item.oldValue}}
+                            </s>
+                        </td>
+                        <td>{{item.value}}</td>
+                    </tr>
+                </ng-template>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+    )
+</div>
+
+
+

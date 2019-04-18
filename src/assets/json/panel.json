@@ -1,0 +1,80 @@
+{
+  "type": [
+    {
+      "name": "Outlet Panel Exterior",
+      "key": "oulet_ext"
+    },
+    {
+      "name": "Outlet Panel Interior",
+      "key": "oulet_int"
+    },
+    {
+      "name": "Wheeled Panel",
+      "key": "wheeled"
+    },
+    {
+      "name": "Fixed Panel",
+      "key": "fixed_panel"
+    },
+    {
+      "name": "Door-Lock Panel Interior",
+      "key": "door_lock_int"
+    },
+    {
+      "name": "Door-Lock Panel Exterior",
+      "key": "door_lock_Ext"
+    },
+    {
+      "name": "Counter-Plate Panel",
+      "key": "counter_plate"
+    },
+    {
+      "name": "Holes Panel",
+      "key": "holes"
+    }
+  ],
+  "direction": [
+    {
+      "name": "Left Directional",
+      "key": "left"
+    },
+    {
+      "name": "Right Directional",
+      "key": "right"
+    }
+  ],
+  "glass": [
+    {
+      "name": "Securit 8 mm",
+      "key": "securit_8mm"
+    },
+    {
+      "name": "Securit 10 mm",
+      "key": "securit_10mm"
+    },
+    {
+      "name": "Laminated 8 mm",
+      "key": "laminated_8mm"
+    },
+    {
+      "name": "Laminated 10 mm",
+      "key": "laminated_10mm"
+    },
+    {
+      "name": "Sablat 8 mm",
+      "key": "sablat_8mm"
+    },
+    {
+      "name": "Sablat 10 mm",
+      "key": "sablat_10mm"
+    },
+    {
+      "name": "Smoke-Colored 8 mm",
+      "key": "smoke_8mm"
+    },
+    {
+      "name": "Smoke-Colored 10 mm",
+      "key": "smoke_10mm"
+    }
+  ]
+}

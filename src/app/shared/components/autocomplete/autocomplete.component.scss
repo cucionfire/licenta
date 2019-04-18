@@ -1,0 +1,29 @@
+.autocomplete-container {
+  width: 100%;
+  position: relative;
+  .autocomplete-dropdown {
+    width: auto;
+    padding: 20px 20px 20px 10px;
+    background-color: white;
+    position: absolute;
+    top: 36px;
+  }
+  .autocomplete {
+    width: calc(100% - 52px);
+    float: left;
+  }
+  .autocomplete-action-buttons {
+    padding-top: 40px;
+    display: inline-block;
+  }
+  .autocomplete-manager {
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    padding: 10px;
+    background-color: white;
+  }
+  .autocomplete-manager .input-field{
+    min-width: 250px;
+  }
+}

@@ -1,0 +1,45 @@
+<div class="row border-bottom">
+    <nav class="navbar navbar-fixed-top white-bg" role="navigation">
+        <div class="branding-wrapper hidden-sm hidden-xs">
+            <div class="menu-trigger">
+                <a class="minimalize-styl-2 btn btn-primary" (click)="toggleNavigation()"><i class="fa fa-th-large"></i> </a>
+            </div>
+        </div>
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">Meniu
+      </button>
+            <a class="navbar-brand hidden-md hidden-lg" href="#">Programul Meu</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-default navbar-right">
+                <li class="topLinks">
+                    <span class="m-r-sm text-muted welcome-message">Bun venit,
+                        <a class="" [routerLink]="['/edit-profile']" title="Editare profil"> Tudor Gheorghe</a>
+                    </span>
+                </li>
+                <li class="topLinks">
+                    <a href="#" title="Log Out">| 
+                        <i class="fa fa-sign-out"></i>|
+                    </a>
+                </li>
+                <li class="topLinks flag">
+                    <a href="#" class="ro" title="Romana"></a>
+                </li>
+                <li class="topLinks flag">
+                    <a href="#" class="en" title="Engleza"></a>
+                </li>
+                <li class="topLinks m-r">
+                    | <select>
+                        <option value="Albastru">Albastru</option>
+                        <option value="Albastru">Slate</option>
+                        <option value="Albastru">Violet</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+</div>

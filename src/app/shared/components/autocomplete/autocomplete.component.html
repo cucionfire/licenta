@@ -1,0 +1,48 @@
+<div class="autocomplete-container">
+    <div class="autocomplete">
+        <div class="input-field col s12">
+            <input type="text" [formControl]="term" class="form-control"
+                   #autoCompleteText [(ngModel)]="value">
+            <label for="" class="{{autoCompleteText.value!=''?'active':''}}">{{label}}</label>
+        </div>
+        <ul id='dropdown1' class='autocomplete-dropdown card' *ngIf="showDropdownSearch">
+            <li *ngFor="let item of results">
+                <a href="javascript:;" (click)="writeValue(item)">{{item[autoCompleteObj.select.label]}}</a>
+            </li>
+            <li *ngIf="results.length==0">
+                No results
+            </li>
+        </ul>
+    </div>
+    <div class="autocomplete-action-buttons">
+        <a (click)="manage()">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+    <div class="autocomplete-manager card" [hidden]="!showManager">
+        <form>
+            <div class="row" *ngFor="let item of autoCompleteObj.fields">
+                <div class="input-field col s12">
+                    <input id="{{item.key}}" type="text" class="validate"
+                           [ngModelOptions]="{standalone: true}"
+                           [(ngModel)]="newItem[item.key]" *ngIf="item.item.type=='text'"
+                    >
+                    <input id="first_name3" materialize="pickadate" type="text" class="validate date"
+                           [ngModelOptions]="{standalone: true}"
+                           [(ngModel)]="newItem[item.key]" *ngIf="item.item.type=='datepicker'"
+                    >
+                    <label [attr.for]="item.key" class="">{{item.item.label}}</label>
+                </div>
+            </div>
+            <div class="clearifx"></div>
+            <button class="waves-effect waves-light btn" (click)="cancel()">
+                Cancel
+            </button>
+            <button class="waves-effect waves-light btn right" (click)="saveItem()">
+                Add
+            </button>
+            <div class="clearifx"></div>
+        </form>
+    </div>
+</div>
+

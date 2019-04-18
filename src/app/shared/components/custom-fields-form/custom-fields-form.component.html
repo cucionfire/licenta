@@ -1,0 +1,34 @@
+<form>
+  <legend>Custom fields</legend>
+  <div class="row">
+    <div *ngFor="let item of inputs">
+      <div [ngSwitch]="item.type">
+        <div *ngSwitchCase="'datepicker'">
+          <div class="input-field col s12">
+            <label>{{item.headerName |i18n:lang }}</label>
+            <input [name]="item.field" 
+              type="text" [(ngModel)]="form[item.field]" />
+          </div>
+        </div>
+        <div *ngSwitchCase="'boolean'">
+          <div class="input-field col s12">
+            <select [(ngModel)]="form[item.field]" name="selectedOption" materialize="material_select" >
+                <option value="" disabled selected>Choose your option</option>
+                <option *ngFor="let option of booleanValues" [value]="option.value">{{option.name}}</option>
+              </select>
+            <label>Materialize Select</label>
+
+          </div>
+        </div>
+        <div class="input-field col s12" *ngSwitchCase="'number'">
+          <label class="control-label " for="focusedInput2">{{item.headerName |i18n:lang }}</label>
+          <input class="form-control" id="focusedInput2" type="number" [name]="item.field" [(ngModel)]="form[item.field]">
+        </div>
+        <div class="input-field col s12" *ngSwitchDefault>
+          <label class="control-label " for="focusedInput2">{{item.headerName |i18n:lang }}</label>
+          <input class="form-control" id="focusedInput2" type="text" [name]="item.field" [(ngModel)]="form[item.field]">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

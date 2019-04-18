@@ -1,0 +1,33 @@
+{
+  "id": "s",
+  "name": "Standard",
+  "colConfig": [
+    {
+      "name": "Client ID",
+      "prop": "ClientID",
+      "maxWidth": 100,
+      "hide": false
+    },
+    {
+      "name": "Prenume",
+      "prop": "FirstName",
+      "width": 120
+    },
+    {
+      "name": "Nume",
+      "prop": "LastName",
+      "width": 120
+    },
+    {
+      "name": "Email",
+      "prop": "Email",
+      "width": 100
+    },
+    {
+      "name": "Telefon",
+      "prop": "Phone",
+      "width": 100,
+      "hide": false
+    }
+  ]
+}

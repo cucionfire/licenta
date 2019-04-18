@@ -1,0 +1,122 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <h2>Editare profil</h2>
+    </div>
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="tabs-container">
+            <ul class="nav nav-tabs">
+                <li class=""><a data-toggle="tab" href="#tab-1" aria-expanded="true">Date Personale</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Date Companie</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">Schimbare Email</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-4" aria-expanded="false">Schimbare Parola</a></li>
+                <li class=""><a data-toggle="tab" href="#tab-5" aria-expanded="false">Setari Cont</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="ibox float-e-margins">
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane">
+                <div class="ibox-title">
+                    <small>Date Personale</small>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-7 col-sm-7 col-xs-12 b-r">
+                                <form role="form">
+                                    <div class="form-group">
+                                        <label class="control-label">*Nume</label>
+                                        <input name="FirstName" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">*Prenume</label>
+                                        <input name="SecondName" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Gen</label>
+                                        <select type="text" name="LastName" class="form-control">
+                                          <option value="">selectati valoarea dorita</option>
+                                          <option value="">Feminin</option>
+                                          <option value="">Masculin</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group" id="data_2">
+                                        <label class="control-label">Data nasterii</label>
+                                        <div class="input-group date">
+                                            <input type="datetime" class="form-control" date-time ng-model="sampleDate" view="year" auto-close="true">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group text-center">
+                                            <button type="button" class="btn btn-primary" (click)="onSave()">Salveaza Modificarile</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        {{msg}}
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-5 col-sm-5 hidden-xs" style="margin-top: 35px">
+                                <p><i class="fa fa-info-circle" style="margin-right: 5px"></i> Toate campurile sunt obligatorii</p><br/>
+                                <p><i class="fa fa-info-circle" style="margin-right: 5px"></i> Dupa completare apasati pe butonul "Salveaza Modificarile"</p><br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-2" class="tab-pane">
+                <div class="ibox-title">
+                    <small>Date Personale</small>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div class="panel-body">
+                        <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-3" class="tab-pane">
+                <div class="ibox-title">
+                    <small>Date Personale</small>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div class="panel-body">
+                        <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-4" class="tab-pane">
+                <div class="ibox-title">
+                    <small>Date Personale</small>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div class="panel-body">
+                        <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-5" class="tab-pane">
+                <div class="ibox-title">
+                    <small>Date Personale</small>
+                    <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                    <div class="panel-body">
+                        <strong>Lorem ipsum dolor sit amet, consectetuer adipiscing</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

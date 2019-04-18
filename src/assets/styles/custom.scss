@@ -1,0 +1,210 @@
+@import 'grid.scss';
+
+/* Start CSS customization */
+
+#customDesign {
+    // Robert CSS------
+    .topLinks {
+        font-weight: 600;
+        padding: 14px 5px;
+    }
+    .topLinks a {
+        padding: 0px;
+    }
+    .topLinks a:hover {
+        background-color: transparent !important;
+    }
+    .flag {
+        padding: 17px 0;
+    }
+    .ro {
+        width: 20px;
+        height: 12px;
+        background-image: url('../img/ro_flag.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 2px;
+    }
+    .en {
+        width: 21px;
+        height: 12px;
+        background-image: url('../img/us-flag-icon-23.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 2px;
+    }
+    #logedUserName {
+        margin-bottom: 0px;
+    }
+    .dataTableSorter {
+        background: #fff;
+        padding: 10px 15px;
+    }
+    i {
+        margin-right: 10px;
+    }
+    i.fa {
+        color: #676767;
+    }
+    .mini-navbar .sidebar-collapse {
+        display: none;
+    }
+    .navbar-static-side {
+        background: #1988c8;
+    }
+    .btn-primary {
+        background-color: #14ba1c;
+        border-color: #14ba1c;
+        color: #FFFFFF;
+    }
+    .navbar-fixed-top,
+    .navbar-static-top {
+        background: rgba(25, 136, 200, 0.59);
+    }
+    .page-heading {
+        padding: 50px 15px 20px 15px;
+    }
+    .nav>li>a:hover,
+    .nav>li>a:focus {
+        text-decoration: none;
+        background-color: #71b3d9;
+    }
+    // END Robert CSS---------------------------------
+    .branding-wrapper {
+        display: table;
+        height: 45px;
+        float: left;
+    }
+    .logo-icon {
+        display: table-cell;
+        width: 30px;
+        /*background: url('../img/plane.png') no-repeat center center;*/
+        background-size: 80%;
+    }
+    .logo-text {
+        display: table-cell;
+        /* background: url('../img/airline.png') no-repeat left center;*/
+        width: 100px;
+    }
+    .navbar-header .btn {
+        margin: 0px;
+        line-height: 45px;
+    }
+    .menu-trigger {
+        display: table-cell;
+        width: 50px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .menu-trigger a {
+        float: none;
+        margin: 0px;
+        border-radius: 0px;
+        background: transparent;
+        border-color: transparent;
+        transition: .2s;
+    }
+    .menu-trigger a i {
+        font-size: 20px;
+        vertical-align: middle;
+        color: #fff;
+    }
+    .menu-trigger a:hover i {
+        color: #636363;
+    }
+    .menu-trigger a:hover,
+    .menu-trigger a:focus {
+        background: transparent !important;
+        border-color: transparent !important;
+    }
+    body.mini-navbar #page-wrapper {
+        margin: 0 0 0 0px;
+    }
+    body.mini-navbar .navbar-static-side,
+    body.mini-navbar #side-menu {
+        width: 0px;
+        background: #f6f6f6 !important;
+    }
+    body.mini-navbar .navbar-static-side {
+        border-right: 0px;
+    }
+    .navbar-static-side {
+        top: 50px;
+        background: #1988c8 !important;
+        height: calc(100% - 45px);
+    }
+    .navbar-static-side #side-menu,
+    .navbar-static-side .nav-header {
+        background: #1988c8 !important;
+    }
+    #side-menu li a {
+        background: #1988c8;
+        font-size: 14px;
+        color: #fff;
+        font-weight: normal;
+    }
+    body.mini-navbar #side-menu li a {
+        background: #f6f6f6;
+    }
+    body.mini-navbar .navbar-static-side li.active a,
+    body.mini-navbar .navbar-static-side li:hover:not(.nav-header) a {
+        background: #658db3 !important;
+    }
+    body.mini-navbar .navbar-static-side i {
+        color: #69737a;
+        font-size: 23px;
+        vertical-align: middle;
+        opacity: 1;
+    }
+    .navbar-static-side i {
+        width: 20px;
+        font-size: 18px;
+        opacity: .8;
+        vertical-align: middle;
+    }
+    body.mini-navbar #side-menu li.active i,
+    body.mini-navbar #side-menu li:hover i {
+        color: #FFF;
+    }
+    .nav-second-level li a,
+    .nav-third-level li a {
+        padding-left: 30px !important;
+    }
+    .metismenu li a:not(.user-name) {
+        padding: 9px 9px 9px 15px;
+        border-top: 1px solid rgba(153, 153, 153, 0.25);
+    }
+    .second-level-collapse a {
+        padding-left: 38px;
+    }
+    #side-menu li a:hover:not(.user-name) {
+        background: #14ba1c;
+    }
+    body.mini-navbar #side-menu li a {
+        padding: 11px 11px 10px 13px !important;
+        border-top: 0px;
+    }
+    .nav-header {
+        background-image: none;
+        background: #f6f6f6 !important;
+    }
+    body {
+        background: #FFF;
+        margin-top: 45px;
+    }
+    #page-wrapper {
+        background: #FFF;
+    }
+    .nav>li.active {
+        border-left: 0px;
+    }
+    .navbar-default.navbar-static-side {
+        border-right: 1px solid rgba(153, 153, 153, 0.25);
+    }
+    .modal-body .ibox-content {
+        background-color: #f8fafb;
+    }
+    .modal-body.form {
+        padding: 10px;
+    }
+}

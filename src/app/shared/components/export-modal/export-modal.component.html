@@ -1,0 +1,52 @@
+<div id="exportModal" class="modal small-modal">
+    <div class="modal-content">
+        <h4>Export data</h4>
+        <div class="row modal-body">
+            <form class="col s12" #exportForm="ngForm">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select name="format" required ngModel >
+                            <option value="" disabled>{{'Choose format' | i18n:lang}}</option>
+                            <option *ngFor="let item of formats" [value]="item.code" >{{item.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select name="layout" required ngModel materialize="material_select" >
+                            <option value="" disabled>{{'Choose layout' | i18n:lang}}</option>
+                            <option *ngFor="let item of layouts" [value]="item.code">{{item.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field">
+                        <div class="col s5">
+                            <label for="visible_columns">{{'Export columns' | i18n:lang}}</label>
+                        </div>
+                        <div class="col s7">
+                            <div class="radio-container">
+                                <input name="columns" required ngModel value="visible" type="radio" id="visible_columns" />
+                                <label for="visible_columns">{{'Visible columns' | i18n:lang}}</label>
+                            </div>
+                            <div class="radio-container">
+                                <input name="columns" required ngModel value="all" type="radio" id="allColumns" />
+                                <label for="allColumns">{{'All columns' | i18n:lang}}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button href="javascript:;"
+                (click)="export(exportForm.value);"
+                class="modal-action modal-close waves-effect waves-green btn-flat"
+                [disabled]="!exportForm.valid"
+        >{{'Export'| i18n:lang}}</button>
+        <button (click)="close();" class="modal-action modal-close waves-effect waves-green btn-flat ">{{'Close' | i18n:lang}}</button>
+        <div class="clearfix"></div>
+    </div>
+</div>

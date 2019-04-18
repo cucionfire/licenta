@@ -1,0 +1,90 @@
+<div class="col-md-12 collapse" id="collapseAddUser">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <small>Adaugare utilizator nou</small>
+            <div ibox-tools></div>
+        </div>
+        <div class="ibox-content">
+            <div class="row">
+                <div class="col-md-8 col-sm-7 col-xs-12 b-r">
+                    <form role="form">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">*Nume</label>
+                                <input name="FirstName" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">*Prenume</label>
+                                <input name="SecondName" type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">*Telefon</label>
+                                <input type="text" name="Phone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Gen</label>
+                                <select type="text" name="LastName" class="form-control">
+                                        <option value="">selectati valoarea dorita</option>
+                                        <option value="">Feminin</option>
+                                        <option value="">Masculin</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">*Email</label>
+                                <input type="email" name="Email" class="form-control">
+                            </div>
+                            <div class="form-group" id="data_2">
+                                <label class="control-label">Data nasterii</label>
+
+                                <div class="input-group date">
+                                    <input type="datetime" class="form-control" date-time ng-model="sampleDate" view="year" auto-close="true">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Tip Utilizator</label>
+                                <select type="text" name="userType" class="form-control">
+                                        <option value="">De grup</option>
+                                        <option value="">Individual</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Rol in Companie</label>
+                                <select type="text" name="userType" class="form-control">
+                                        <option value="">Manager</option>
+                                        <option value="">Manichiurist</option>
+                                        <option value="">Stilist</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Drept Programari</label>
+                                <select type="text" name="userType" class="form-control">
+                                        <option value="">Da</option>
+                                        <option value="">Nu</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group pull-right">
+                                <button type="button" class="btn btn-white">Anuleaza</button>
+                                <button type="button" class="btn btn-primary" (click)="onSave()">Salveaza</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {{msg}}
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-5 hidden-xs" style="margin-top: 35px">
+                    <p><i class="fa fa-info-circle" style="margin-right: 5px"></i> "*" campurile sunt obligatorii</p><br/>
+                    <p><i class="fa fa-info-circle" style="margin-right: 5px"></i> Dupa completare apasati pe butonul "Salveaza"</p><br/>
+                    <p><i class="fa fa-info-circle" style="margin-right: 5px"></i> Datele clientului adaugat pot fi modificate din tabel apasand pe "Editeaza"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

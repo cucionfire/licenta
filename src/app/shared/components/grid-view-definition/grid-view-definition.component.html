@@ -1,0 +1,32 @@
+<div class="btn-group left">
+  <!--<a href="javascript:void(0)" class="btn btn-default btn-raised"></a>-->
+  <!--<a href="javascript:void(0)" data-target="#" class="btn btn-default btn-raised dropdown-toggle" data-toggle="dropdown" aria-expanded="true">-->
+    <!--<span class="caret"></span><div class="ripple-container"></div>-->
+  <!--</a>-->
+  <!--<ul class="dropdown-menu">-->
+    <!--<li *ngFor="let item of views"><a *ngIf="item!=selectedView" (click)="changeView(item);">{{item.name}}</a></li>-->
+        <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><a href="javascript:void(0)">Separated link</a></li>&ndash;&gt;-->
+  <!--</ul>-->
+    <!---->
+
+
+    <!--dropdown-->
+    <a class='dropdown-button btn' data-activates='views-dropdown'>{{selectedView.name}}</a>
+    <ul id='views-dropdown' class='dropdown-content'>
+        <li *ngFor="let item of views"><a *ngIf="item!=selectedView" (click)="changeView(item);">{{item.name}}</a></li>
+    </ul>
+    <!--end-->
+</div>
+
+
+
+
+<div class="left" [hidden]="!canBeSaved">
+    <div class="form-group label-floating is-empty" style="margin: 11px;">
+        <input type="text" #viewName class="form-control left" id="focusedInput2" placeholder="View name" style=" width: 210px;">
+        <button class="btn btn-primary btn-raised btn-xs left" (click)="saveView(viewName.value)">Save</button>
+    </div>
+
+
+</div>

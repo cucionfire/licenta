@@ -1,0 +1,72 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-9 col-sm-6 col-xs-6">
+    <h2>Lista Servicii</h2>
+    <ol class="breadcrumb">
+      <li class="active">
+        Administreaza serviciile aplicatiei.
+      </li>
+    </ol>
+  </div>
+
+  <div class="col-lg-3 col-sm-6 col-xs-6">
+    <div class="title-action">
+      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddService"
+        aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-plus "></i> Adauga serviciu</button>
+    </div>
+  </div>
+
+
+</div>
+
+<div class="row wrapper wrapper-content animated fadeInRight">
+
+  <services-detail></services-detail>
+
+  <div class="col-md-12">
+    <div class="dataTableSorter">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 pull-right listSearch">
+          <form method="get" action="" class="form-horizontal">
+            <div class="input-group">
+              <input type="text" class="form-control" name="search" placeholder="cauta in lista">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-sm btn-primary">Cauta</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" col-sm-12">
+    <ngx-datatable class="material" [rows]="rows" [messages]="messages" [columnMode]="'force'"
+      [loadingIndicator]="loadingIndicator" [selectionType]="'single'" (select)='onSelect($event)'>
+      <ngx-datatable-column name="Nume Serviciu" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.ServiceName}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Pret Estimativ" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.EstPrice}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Durata Estimativa" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.Duration}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Actiuni" sortable="false" prop="id">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <a (click)="editClient(row.ClientID)">
+            <i class="fa fa-pencil" title="Editare"></i>
+          </a>
+          <a (click)="deleteClient(row.ClientID)">
+            <i class="fa fa-trash" title="Sterge"></i>
+          </a>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>

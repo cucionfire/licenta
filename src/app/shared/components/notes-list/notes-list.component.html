@@ -1,0 +1,64 @@
+<div class="notes-list">
+<div class="display-table section-title">
+    <div class="display-table-cell">
+        <h4>{{'Notes'|i18n:lang}}</h4>
+    </div>
+    <div class="display-table-cell cell-right">
+        <a (click)="addNote()">
+            <i class="material-icons">{{showForm ? 'close':'note_add'}}</i>
+        </a>
+    </div>
+</div>
+<form class="noBorderForm2 formInput100" #noteForm="ngForm" [hidden]="!showForm">
+    <div class="form-group is-empty label-floating">
+        <label class="control-label">{{'Class'|i18n:lang}}</label>
+        <input type="text"
+               [(ngModel)]="selectedNote.noteDetails.note_class_cd"
+               value="selectedNote.noteDetails.note_class_cd"
+               class="form-control"
+               name="note_class_cd"
+               required>
+    </div>
+    <div class="form-group label-floating">
+        <label class="control-label ">{{'Content'|i18n:lang}}</label>
+        <textarea class="form-control" [(ngModel)]="selectedNote.noteDetails.text" style="width: 100%; min-height: 200px" required name="text"></textarea>
+    </div>
+    <div class="form-group label-floating is-empty">
+        <label class="control-label ">{{'Url'|i18n:lang}}</label>
+        <input type="text" [(ngModel)]="selectedNote.noteDetails.link_url" required name="link_url" class="form-control">
+    </div>
+    <div class="form-group is-empty action-buttons">
+        <button class="btn btn-primary btn-raised" (click)="addNewNote(noteForm.value)"
+                [disabled]="!noteForm.control.valid"
+                *ngIf="!selectedNote._id"
+        > {{'Add note'|i18n:lang}}
+        </button>
+        <button class="btn btn-primary btn-raised"
+                *ngIf="selectedNote._id"
+                (click)="updateNote()"
+        >{{'Update'|i18n:lang}}
+        </button>
+        <button class="btn btn-danger btn-raised"
+                *ngIf="selectedNote._id"
+                (click)="deleteNote()"
+                 >{{'Delete'|i18n:lang}}
+        </button>
+    </div>
+</form>
+<div class="clearfix"></div>
+<ul class="notes-container">
+    <li *ngFor="let itemNote of notes" (click)="selectNote(itemNote)">
+        <span class="note-pic">
+            <span class="material-icons">person</span>
+        </span>
+        <span class="note-body">
+            <span class="note-head">
+                <a href="javascript:;" class="note-author">{{itemNote.noteDetails.user_shortname}}</a> {{'added a'|i18n:lang}}
+                <strong><i>{{itemNote.noteDetails.note_class_cd}}</i></strong> {{'note on'|i18n:lang}}
+                <span class="note-date">{{itemNote.noteDetails.mod_dt | date:'MM.dd.yyyy @ h:mma'}}</span>
+            </span>
+            <span class="itemNoteCustom">{{itemNote.noteDetails.text}}</span>
+        </span>        
+    </li>
+</ul>
+</div>

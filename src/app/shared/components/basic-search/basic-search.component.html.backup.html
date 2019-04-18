@@ -1,0 +1,47 @@
+
+<div class="display-table section-title">
+    <div class="display-table-cell">
+        <h4>Basic search</h4>
+    </div>
+    <div class="display-table-cell cell-right">
+        <button class="btn btn-raised btn-primary right" (click)="filter()">Search</button>
+        <button class="btn btn-raised btn-primary right" (click)="reset();basicForm.reset();">Reset</button>
+    </div>
+</div>
+<form #basicForm class="basic-search-form">
+    <div *ngFor="let item of columns" class="basic-search-row">
+        <div [ngSwitch]="item.type">
+            <div *ngSwitchCase="'domainValueLong'">
+                <lov-component
+                    [(ngModel)]="filters[item.field]"
+                    [name]="item.field"
+                    [identifier]="item.identifier"
+                    [returnValue]="item.returnValue"
+                    [displayedValue]="item.displayedValue"
+                    [label]="item.headerName"
+                    [size]="'12'"
+                    [local]="item.local"
+                ></lov-component>
+            </div>
+            <div class="input-field col s12"  *ngSwitchCase="'date'">
+                <label>{{item.headerName}}</label>
+                <input materialize="pickadate" [name]="item.field"
+                        type="text"
+                        [(ngModel)]="filters[item.field]"
+                />
+            </div>
+            <div class="input-field col s12" *ngSwitchDefault>
+                <label class="control-label " for="focusedInput2">{{item.headerName}}</label>
+                <input class="form-control" id="focusedInput2" type="text" [name]="item.field"
+                       [(ngModel)]="filters[item.field]">
+            </div>
+        </div>
+
+    </div>
+</form>
+<div class="clearfix"></div>
+<div class="actions-tools bottom right" style="display: none;">
+    <button class="btn btn-raised btn-primary" (click)="filter()">Search</button>
+    <button class="btn btn-raised btn-primary" (click)="reset();basicForm.reset();">Reset</button>
+</div>
+

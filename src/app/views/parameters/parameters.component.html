@@ -1,0 +1,39 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Parametrii</h2>
+    <ol class="breadcrumb">
+      <li class="active">
+        Administreaza parametrii aplicatiei.
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2">
+    <div class="title-action">
+      <button class="btn btn-sm btn-primary" [disabled]="!hasChange" (click)="onSave()">
+        <i class="fa fa-plus "></i> Salveaza modificarile</button>
+    </div>
+  </div>
+</div>
+
+<div class="row wrapper wrapper-content animated fadeInRight">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Parameter</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let key of paramsKey">
+          <td>{{key}}</td>
+          <td>{{ params?.Value[key]['name'] }}</td>
+          <td>
+            <input (change)="onChange()" [(ngModel)]='params["Value"][key]["value"]' [value]='params["Value"][key]["value"]' />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

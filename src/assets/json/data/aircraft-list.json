@@ -1,0 +1,267 @@
+[
+  {
+    "type": "rpc",
+    "tid": 14,
+    "action": "aircraftListController",
+    "method": "getAll",
+    "result": {
+      "metaData": {
+        "root": "records",
+        "totalProperty": "total",
+        "successProperty": "success",
+        "log": {
+          "errors": 0,
+          "warns": 0,
+          "infos": 0,
+          "message": null
+        }
+      },
+      "total": 24,
+      "records": [
+        {
+          "ac_no": 10,
+          "operational_ac_type": "321",
+          "registration": "CG100",
+          "valid_from": "2016-01-01",
+          "valid_to": "2020-12-31",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA",
+          "nose_no": "111"
+        },
+        {
+          "ac_no": 8,
+          "operational_ac_type": "733",
+          "registration": "DABAB",
+          "valid_from": "1999-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 536,
+          "operational_ac_type": "733",
+          "registration": "DABEA",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 6,
+          "operational_ac_type": "321",
+          "registration": "DABEB",
+          "valid_from": "2016-01-01",
+          "valid_to": "2050-12-31",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 564,
+          "operational_ac_type": "735",
+          "registration": "DABIA",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 576,
+          "operational_ac_type": "735",
+          "registration": "DABIP",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 5326,
+          "operational_ac_type": "735",
+          "registration": "DABJI",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 30,
+          "operational_ac_type": "ABA",
+          "registration": "DAIAI",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 523,
+          "operational_ac_type": "314",
+          "registration": "DAIDA",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 309,
+          "operational_ac_type": "313",
+          "registration": "DAIDB",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 525,
+          "operational_ac_type": "314",
+          "registration": "DAIDC",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 25410,
+          "operational_ac_type": "320",
+          "registration": "DAIZG",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 25412,
+          "operational_ac_type": "320",
+          "registration": "DAIZH",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 26190,
+          "operational_ac_type": "320",
+          "registration": "DAIZI",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 26192,
+          "operational_ac_type": "320",
+          "registration": "DAIZJ",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 32031,
+          "operational_ac_type": "320",
+          "registration": "DAIZK",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 36010,
+          "operational_ac_type": "738",
+          "registration": "DASXA",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 36011,
+          "operational_ac_type": "738",
+          "registration": "DASXB",
+          "valid_from": "1900-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 9,
+          "operational_ac_type": "318",
+          "registration": "DPFPA",
+          "valid_from": "2013-01-01",
+          "valid_to": "2020-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA",
+          "nose_no": "1133"
+        },
+        {
+          "ac_no": 3,
+          "operational_ac_type": "319",
+          "registration": "FPAPA",
+          "valid_from": "2015-01-01",
+          "valid_to": "2020-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 2,
+          "operational_ac_type": "320",
+          "registration": "FPAPL",
+          "valid_from": "2015-01-01",
+          "valid_to": "2020-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 4,
+          "operational_ac_type": "318",
+          "registration": "FPAPO",
+          "valid_from": "2015-01-01",
+          "valid_to": "2020-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        },
+        {
+          "ac_no": 5,
+          "operational_ac_type": "737",
+          "registration": "FPAQA",
+          "valid_from": "2015-01-01",
+          "valid_to": "2020-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA",
+          "nose_no": "1122"
+        },
+        {
+          "ac_no": 7,
+          "operational_ac_type": "733",
+          "registration": "IREBA",
+          "valid_from": "2010-01-01",
+          "valid_to": "2099-01-01",
+          "owner": "FPA",
+          "operator": "FPA",
+          "customer": "FPA"
+        }
+      ]
+    }
+  }
+]

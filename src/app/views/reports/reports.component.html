@@ -1,0 +1,55 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10 col-sm-6 col-xs-6">
+        <h2>Rapoarte Financiare</h2>
+        <ol class="breadcrumb">
+            <li class="active">
+                Administreaza rapoartele financiare.
+            </li>
+        </ol>
+    </div>
+
+    <div class="col-lg-2 col-sm-6 col-xs-6">
+        <div class="title-action">
+            <button class="btn btn-primary" type="button"><i class="fa fa-print "></i> Printeaza</button>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="row wrapper wrapper-content animated fadeInRight">
+
+    <div class="col-md-12">
+        <div class="dataTableSorter">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 pull-right listSearch">
+                    <div class="form-group" id="data_5">
+                        <label class="font-normal"></label>
+                        <div class="input-daterange input-group" id="datepicker">
+                            <input type="text" class="input-sm form-control" name="start" value="05/14/2014" />
+                            <span class="input-group-addon">pana la</span>
+                            <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" col-sm-12">
+        <ngx-datatable class="material" [rows]="rows" [messages]="messages" [columnMode]="'force'" [loadingIndicator]="loadingIndicator" [selectionType]="'single'" (select)='onSelect($event)'>
+            <ngx-datatable-column name="Raport financiar" sortable="false" prop="id">
+                <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row.RolName}}
+        </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Actiuni" sortable="false" prop="id">
+                <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <a (click)="deleteClient(row.ClientID)">
+            <i class="fa fa-print"></i>
+          </a>
+        </ng-template>
+            </ngx-datatable-column>
+        </ngx-datatable>
+    </div>
+</div>

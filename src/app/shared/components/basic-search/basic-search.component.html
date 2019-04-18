@@ -1,0 +1,51 @@
+
+<div class="display-table section-title">
+    <div class="display-table-cell">
+        <h4>{{'Basic search'|i18n:lang}}</h4>
+    </div>
+    <div class="display-table-cell cell-right">
+        <button class="btn btn-raised btn-primary right" (click)="filter()">{{'Search'|i18n:lang}}</button>
+        <button class="btn btn-raised btn-primary right" (click)="reset();basicForm.reset();">{{'Reset'|i18n:lang}}</button>
+    </div>
+</div>
+<form #basicForm>
+    <div *ngFor="let item of columns">
+        <div [ngSwitch]="item.type">
+            <div *ngSwitchCase="'domainValueLong'">
+                <lov-component
+                    [(ngModel)]="filters[item.field]"
+                    [name]="item.field"
+                    [identifier]="item.identifier"
+                    [returnValue]="item.returnValue"
+                    [displayedValue]="item.displayedValue"
+                    [label]="item.headerName"
+                    [size]="'12'"
+                    [local]="item.local"
+                ></lov-component>
+            </div>
+            <div *ngSwitchCase="'date'">
+                <div class="input-field col s12">
+                    <label>{{item.headerName |i18n:lang }}</label>
+                    <input materialize="pickadate" [name]="item.field"
+                           type="text"
+                           [(ngModel)]="filters[item.field]"
+                    />
+                </div>
+            </div>
+            <div class="input-field col s12" *ngSwitchDefault>
+                <label class="control-label " for="focusedInput2">{{item.headerName |i18n:lang }}</label>
+                <input class="form-control" id="focusedInput2" type="text" [name]="item.field"
+                       [(ngModel)]="filters[item.field]">
+            </div>
+        </div>
+
+    </div>
+</form>
+<div class="clearfix"></div>
+<div class="actions-tools bottom right" style="display: none;">
+    <button class="btn btn-raised btn-primary" (click)="filter()">{{'Search'|i18n:lang}}</button>
+    <button class="btn btn-raised btn-primary" (click)="reset();basicForm.reset();">
+        {{'Reset'|i18n:lang}}
+        </button>
+</div>
+

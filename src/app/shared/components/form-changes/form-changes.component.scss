@@ -1,0 +1,9 @@
+td.changeDate{
+    color: rgba(238,110,115,0.7);
+}
+.dropdown-content{
+    width:300px!important;
+}
+.dropdown-content li:hover, .dropdown-content li.active, .dropdown-content li.selected {
+    background-color: transparent;
+}

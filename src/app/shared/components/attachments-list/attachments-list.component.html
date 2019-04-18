@@ -1,0 +1,74 @@
+<div class="attachments-list">
+    <div class="display-table section-title">
+        <div class="display-table-cell">
+            <h4>{{'Attachements'|i18n:lang}}</h4>
+        </div>
+        <div class="display-table-cell cell-right">
+            <a (click)="addAttach()">
+                <i class="material-icons">{{showForm ? 'close':'note_add'}}</i>
+            </a>
+        </div>
+    </div>
+
+    <form [hidden]="!showForm" enctype="multipart/form-data">
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="last_name">{{'Document type'|i18n:lang}}</label>
+                <input id="last_name" type="text" name="doc_type_cd" class="validate">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="obusolete">{{'Is document obsolete'|i18n:lang}} ?</label>
+                <select [(ngModel)]="selectedOption" id="obusolete" name="is_obsolete_flg_l" materialize="material_select">
+                <option value="" disabled selected></option>
+                <option *ngFor="let option of ['Yes','No']" [value]="option">{{option}}</option>
+            </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <label for="description">{{'Description'|i18n:lang}}</label>
+                <input id="description" name="doc_desc" type="text" class="validate">
+            </div>
+        </div>
+        <div class="row">
+            <div class="file-field input-field">
+                <div class="btn right waves-effect waves-teal btn-flat">
+                    <span>{{'Choose'|i18n:lang}}</span>
+                    <input name="file_name" type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="{{'Upload file'|i18n:lang}}">
+                </div>
+            </div>
+        </div>
+        <div class="row submit-row">
+            <div class="submit-field input-field col s12">
+                <!--<button class="btn waves-effect waves-light" (click)="save($event)">Save
+                <i class="material-icons right">send</i>
+            </button>-->
+                <button class="btn waves-effect waves-light" (click)="save($event)">{{'Save'|i18n:lang}}</button>
+            </div>
+        </div>
+    </form>
+    <div class="clearfix"></div>
+
+    <div class="clearfix" *ngFor="let item of attach;let i = index">
+        <div class="col s1 n-pad">
+            <div class="icon-{{item.file_ext}}"></div>
+        </div>
+        <div class="col s10 attachment">
+            <div class="col s12 pl5 uploadDate">
+                <a href="extDocument/download?fileid={{item.ext_doc_id}}&extension={{item.file_ext}}&filename={{item.file_name}}" download>{{item.file_name}}</a><br>                Uploaded On {{item.upload_dt}} by
+                <a class="user">
+                    <span class="icon-user"></span> {{item.usr_logname}}
+                </a>
+            </div>
+        </div>
+        <a class="pull-right attachClose" (click)="remove(item.ext_doc_id,i)" title="remove">
+            <i class="material-icons">close</i>
+        </a>
+    </div>
+    <div style="clear:both"></div>
+</div>
